@@ -1,5 +1,84 @@
 <script>
 var introRiff = ["Gm",6,5,6,7,7.7,7,7.7,12.2,11,7.7]
+//"s-g" means scale G aolean minor
+//"o4" means "octave 4"
+//for example, if "s-g" and "o4" then...
+//  1   is Gn4
+//  2   is An4 
+//  3   is Bb4
+//  4   is Cn4
+//  5   is Dn4
+//  6   is Eb4
+//  7   is Fn4
+//  +1  is G#4
+//  +2  is A#4
+//  +3  is Bn4
+//  +4  is C#4
+//  +5  is D#4
+//  +6  is En4
+//  +7  is F#4
+//  -1  is Gb4
+//  -2  is Ab4
+//  -3  is Bbb4
+//  -4  is Cb4
+//  -5  is Db4
+//  -6  is Ebb4
+//  -7  is Fb4
+
+//  In other words if the scale is aolean
+//  and the note is "6" then it will be six
+//  letters up from the tonic note and it
+//  will be a minor 6.
+//  But if the scale is ionian then "6" will
+//  be 6 letters up from the tonic and be a
+//  major 6.
+
+//  Any mode could be programmed in this
+//  way. Or any tuning system.
+
+let musicAlphabet = "abcdefg";
+let modes = {
+  "ionian"      : "1234567",
+  "dorian"      : "2345671",
+  "phrygian"    : "3456712",
+  "lydian"      : "4567123",
+  "mixolydian"  : "5671234",
+  "aolean"      : "6712345",
+  "locrian"     : "7123456",
+}
+
+let As-aolean = "+a+b+c+d+e+f+g";
+let Ds-aolean = "+ab+c+d+e+f+g";
+let Gs-aolean = "+ab+c+de+f+g";
+let Cs-aolean = "ab+c+de+f+g";
+let Fs-aolean = "ab+cde+f+g";
+let B-aolean  = "ab+cde+fg";
+let E-aolean  = "abcde+fg";
+let A-aolean  = "abcdefg";
+let D-aolean  = "defga-bc";
+let G-aolean  = "ga-bcd-ef";
+let F-aolean  = "fg-a-bc-d-e";
+let Bb-aolean = "-bc-d-ef-g-a";
+let Eb-aolean = "-ef-g-a-b-c-d";
+let Ab-aolean = "-a-b-c-d-e-f-g";
+
+let Cs-ionian  = "cdefgab";
+let Fs-ionian  = "cdefgab";
+let B-ionian   = "cdefgab";
+let E-ionian   = "cdefgab";
+let A-ionian   = "cdefgab";
+let D-ionian   = "cdefgab";
+let G-ionian   = "cdefgab";
+let C-ionian   = "cdefgab";
+let F-ionian   = "cdefgab";
+let Bb-ionian   = "cdefgab";
+let Eb-ionian   = "cdefgab";
+let Ab-ionian   = "cdefgab";
+let Db-ionian   = "cdefgab";
+let Gb-ionian   = "cdefgab";
+let Cb-ionian   = "cdefgab";
+
+var introRiff = ["s-go46567+77+7"]
 </script>
 <script src="https://github.com/hendorism/musicnotes/blob/master/js/draw_music_symbols.js"></script>
 <!--
