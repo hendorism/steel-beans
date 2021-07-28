@@ -11,6 +11,13 @@ div.container {
   grid-template-columns: 1fr 200px;
   grid-gap: 5px 3px;/* vertical horizontal */                 }                                                             div.grid-div {                                                  color: #173794;                                               background-color: #eaebee;                                    padding: 8px;
 }
+div.band-calendar {
+  width: 100%;
+  background: #124567;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px 3px;
+}
 
 /* non-grid */
 div.accent-div {
