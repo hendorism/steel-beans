@@ -1,41 +1,25 @@
-<html><head><style>
-*{
-  font-size: 14px;
-  color: #126794;
-  background-color: #fafbfe;
-  font-family: monospace;
-}
-div.container {
-  width: 100%;
-  background: lightgray;
-  display: grid;
-  grid-template-columns: 1fr 200px;
-  grid-gap: 5px 3px;/* vertical horizontal */
-}
-div.grid-div { 
-  color: #173794;
-  background-color: #eaebee;
-  padding: 8px;
-}
+        <html><head>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://github.com/hendorism/musicnotes/blob/master/js/draw_music_symbols_v0019.js"></script>
 
-/* non-grid */
-div.accent-div {
-  background-color: #eae3de;
-  padding: 8px;
-  border-radius: 5px;
-
-}
-		</style></head><body>
+	</head><body>
 			<div class="container">
 <div class="grid-div" id="main-div">
 
-<canvas id="canvas1" width="400px" height="250px"></canvas>
+	<!--
+		canvas1 similar shirt riffage
+		for proof of concept of doing
+		multiple canvases in one page.
+	-->
+
+<canvas id="canvas1" width="400px" height="250px" style="border:1px solid #c3c3c3;"></canvas>
 
 <p>Jeremy out of town sunday morning to thursday
 morning. 7/25 - 7/29</p><hr>
 
-<div class="accent-div">
-<h3>calendar</h3>
+    <div class="accent-div">
+<h3>calendar in reverse chronological order</h3>
 October 30th ZOMBIE BALL, mirkwood, Arlington<br>
 Oct 9th lucky dime everett w/ "the low hums"<br><br>
 
@@ -47,10 +31,18 @@ Aug 28th.    beerfest, outdoor<br>
   *Aug 21st private granite falls<br><br>
 
 July 31st Southside social, Concrete<br>
+  <ul>
+    <li>jeremy arrive 3pm</li>
+    <li>band show up by 7pm</li>
+  </ul>
 July 30th BRODIEnation, Carnation<br>
+  <ul>
+    <li>jeremy arrive 3pm</li>
+    <li>band show up by 7pm</li>
+  </ul>
 July 17th Shedfest, stanwood<br>
 
-</div><!-- div.accent-div -->
+    </div><!-- div.accent-div -->
 
 <br><br>
 __setlist for 7/30 and 7/31<br>
@@ -200,8 +192,8 @@ Here I will add charts for all songs:
 
 <script src="all-songs.js"></script>
 <script src="draw-to-canvas.js"></script>
-<script src="all-songs.js"></script>
-</body></html>
+
+		</body></html>
 
 
 

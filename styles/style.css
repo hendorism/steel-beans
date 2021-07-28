@@ -1,0 +1,19 @@
+*{
+  font-size: 14px;
+  color: #126794;
+  background-color: #fafbfe;
+  font-family: monospace;
+}
+div.container {
+  width: 100%;
+  background: lightgray;
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-gap: 5px 3px;/* vertical horizontal */                 }                                                             div.grid-div {                                                  color: #173794;                                               background-color: #eaebee;                                    padding: 8px;
+}
+
+/* non-grid */
+div.accent-div {
+  background-color: #eae3de;
+  padding: 8px;                                                 border-radius: 5px;                                         
+}
