@@ -18,6 +18,13 @@ div.band-calendar {
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px 3px;
 }
+div.set-list {
+  width: 100%;
+  background: #004567;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-gap: 3px 2px;
+}
 
 /* non-grid */
 div.accent-div {
