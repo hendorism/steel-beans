@@ -10,7 +10,7 @@ div.container {
   width: 100%;
   background: lightgray;
   display: grid;
-  grid-template-columns: 1fr 250px;
+  grid-template-columns: 7fr 5fr;
   grid-gap: 5px 3px; /* vertical lines, horizontal lines */
 }
 div.grid-div {
@@ -30,6 +30,14 @@ div.set-list {
   background: #004567;
   display: grid;
   grid-template-columns: 4fr 1fr;
+  grid-gap: 1px 2px;
+}
+div.band-member-song-mastery-chart {
+  width: 100%;
+  background: #444567;
+  display: grid;
+  grid-template-columns: 4fr 2fr 1fr 1fr 1fr 1fr;
+    /* title key jeremy aaron sean ty */
   grid-gap: 1px 2px;
 }
 
