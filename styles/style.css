@@ -13,11 +13,6 @@ div.container {
   grid-template-columns: 7fr 4fr;
   grid-gap: 5px 3px; /* vertical lines, horizontal lines */
 }
-div.grid-div {
-  background-color: #def4e8;
-  color: #024356;
-  padding: 2px;
-}
 div.band-calendar {
   width: 100%;
   background: #124567;
