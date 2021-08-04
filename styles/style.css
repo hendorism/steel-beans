@@ -12,6 +12,13 @@ div.container {
   display: grid;
   grid-template-columns: 7fr 4fr;
   grid-gap: 5px 3px; /* vertical lines, horizontal lines */
+/* 
+ * a vertical line is a horizontal gap,
+ * and a horizontal line is a vertical gap, so 
+ * in that sense this follows the convention of
+ * X first, then Y
+ *
+ * */
 }
 div.band-calendar {
   width: 100%;
@@ -27,21 +34,9 @@ div.set-list {
   grid-template-columns: 4fr 1fr;
   grid-gap: 1px 2px;
 }
-div.band-member-song-mastery-chart {
-  width: 100%;
-  background: #444567;
-  display: grid;
-  grid-template-columns: 4fr 2fr 1fr 1fr 1fr 1fr;
-    /* title key jeremy aaron sean ty */
-  grid-gap: 1px 2px;
-}
 
-/* classes not related to css grid */
-div.accent-div {
-  background-color: #eae3de;
-  padding: 8px;
-  border-radius: 5px;                                         
-}
+
+
 
 
 
