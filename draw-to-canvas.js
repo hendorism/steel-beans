@@ -15,14 +15,27 @@ for (e=0; e<3; e++) {
         drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx1);
     }
 }
-drawNoteHead(25, 30+25, ctx1);
-drawNoteHead(35, 30+25, ctx1);
-drawBezier(35, 30+25+7, 35+(45-35)/3, 30+25+7+5, 35+2*(45-35)/3, 30+25+7+5, 45, 30+25+7, ctx1);
-drawNoteHead(45, 30+25, ctx1);
-drawNoteHead(55, 30+25, ctx1);
-drawNoteHead(65, 30+25, ctx1);
-drawNoteHead(75, 30+25, ctx1);
-drawNoteHead(85, 30+25, ctx1);
+drawNoteHead(25, 30+25, ctx1); // A4   1-1-1/2
+drawLine(25+3, 30+25, 25+3, 30-5, ctx1);
+drawNoteHead(35, 30+25, ctx1); // A4   1-1-2/2
+drawLine(35+3, 30+25, 35+3, 30-7, ctx1);
+crossBeams(25+3, 30-5, 35+3, 30-7, 1, 6, ctx1);
+drawBezier(35, 30+25+7, 35+(45-35)/3, 30+25+7+5, 35+2*(45-35)/3, 30+25+7+5, 45, 30+25+7, ctx1); // tie
+drawNoteHead(45, 30+25, ctx1); // A4   1-2-1/4
+drawNoteHead(55, 30+20, ctx1); // B4   1-2-2/4
+drawNoteHead(65, 30+15, ctx1); // C#5  1-2-3/4
+drawNoteHead(75, 30+05, ctx1); // E5   1-2-4/4
+drawLine(45+3, 30+25, 45+3, 30-2, ctx1);
+drawLine(55+3, 30+20, 55+3, 30-4, ctx1);
+drawLine(65+3, 30+15, 65+3, 30-6, ctx1);
+drawLine(75+3, 30+05, 75+3, 30-8, ctx1);
+crossBeams(45+3, 30-2, 75+3, 30-8, 2, 5, ctx1); // beat2
+drawEigthRest(85, 30+15, 2, ctx1);
+drawNoteHead(105, 30+05, ctx1);
+drawLine(105+3, 30+05, 105+3, 30-20, ctx1);
+drawEigthRest(115, 30+15, 2, ctx1);
+drawNoteHead(135, 30+05, ctx1);
+drawLine(135+3, 30+05, 135+3, 30-20, ctx1);
 
 
 
