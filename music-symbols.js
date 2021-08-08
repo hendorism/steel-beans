@@ -67,30 +67,28 @@ function drawEigthRest(x, y, d, ctx) {
     }
 }
 
-/*
-function drawFlags(x, y, q, xd, yd, ctx) {
-    if (yd=="u" && xd=="l") {
-        for (i=0, i<q; i++) {
-            drawBezier(x, y, x+2, y+3, x+4, y+2)
-        }
-    }
-    if (yd=="u" && xd=="r") {
-        for (i=0, i<q; i++) {
-            drawBezier(x, y, )
-        }
-    }
-    if (yd=="d" && xd=="l") {
-        for (i=0, i<q; i++) {
-            drawBezier(x, y, )
-        }
-    }
-    if (yd=="d" && xd=="r") {
-        for (i=0, i<q; i++) {
-            drawBezier(x, y, )
-        }
-    }
-}
-*/
+// function drawFlags(x, y, q, xd, yd, ctx) {
+//     if (yd==="u" && xd==="l") {
+//         for (i=0, i<q; i++) {
+//             drawBezier(x, y, x+2, y+3, x+4, y+5, x+2, y+6, ctx);
+//         }
+//     }
+//     if (yd==="u" && xd==="r") {
+//         for (i=0, i<q; i++) {
+//             drawBezier(x, y, x-2, y+3, x-4, y+5, x-2, y+6, ctx);
+//         }
+//     }
+//     if (yd==="d" && xd==="l") {
+//         for (i=0, i<q; i++) {
+//             drawBezier(x, y, x-2, y-3, x-4, y-5, x-2, y-6, ctx);
+//         }
+//     }
+//     if (yd==="d" && xd==="r") {
+//         for (i=0, i<q; i++) {
+//             drawBezier(x, y, x+2, y-3, x+4, y-5, x+2, y-6, ctx);
+//         }
+//     }
+// }
 
 function drawTrebleClef(x, y, ctx){
     // drawReticle(x, y, ctx);
