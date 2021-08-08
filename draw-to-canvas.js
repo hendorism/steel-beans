@@ -33,11 +33,11 @@ crossBeams(45+3, 30-2, 75+3, 30-8, 2, 5, ctx1); // beat2
 drawEigthRest(85, 30+15, 2, ctx1);
 drawNoteHead(105, 30+05, ctx1);
 drawLine(105+3, 30+05, 105+3, 30-20, ctx1);
-//drawFlags(105+3, 30-20, 2, "u", "r", ctx);
+drawFlags(105+3, 30-20, 2, "r", "u", ctx);
 
 drawEigthRest(115, 30+15, 2, ctx1);
 drawNoteHead(135, 30+05, ctx1);
 drawLine(135+3, 30+05, 135+3, 30-20, ctx1);
-//drawFlags(135+3, 30-20, 2, "u", "r", ctx);
+drawFlags(135+3, 30-20, 2, "r", "u", ctx);
 
 
