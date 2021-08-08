@@ -11,8 +11,14 @@ div.container {
   background: lightgray;
   display: grid;
   grid-template-columns: 7fr 4fr;
-  grid-gap: 5px 3px; /* vertical lines, horizontal lines */
-/* 
+  grid-gap: 5px 3px;
+
+
+
+
+
+	/* vertical lines, horizontal lines */
+  /* 
  * a vertical line is a horizontal gap,
  * and a horizontal line is a vertical gap, so 
  * in that sense this follows the convention of
@@ -20,6 +26,7 @@ div.container {
  *
  * */
 }
+
 div.band-calendar {
   width: 100%;
   background: #124567;
@@ -27,6 +34,7 @@ div.band-calendar {
   grid-template-columns: 2fr 5fr;
   grid-gap: 2px 3px;
 }
+
 div.set-list {
   width: 100%;
   background: #004567;
