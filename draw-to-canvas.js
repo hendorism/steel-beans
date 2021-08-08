@@ -19,7 +19,7 @@ drawNoteHead(25, 30+25, ctx1); // A4   1-1-1/2
 drawLine(25+3, 30+25, 25+3, 30-5, ctx1);
 drawNoteHead(35, 30+25, ctx1); // A4   1-1-2/2
 drawLine(35+3, 30+25, 35+3, 30-7, ctx1);
-crossBeams(25+3, 30-5, 35+3, 30-7, 1, 6, ctx1);
+//crossBeams(25+3, 30-5, 35+3, 30-7, 1, 6, ctx1);
 drawBezier(35, 30+25+7, 35+(45-35)/3, 30+25+7+5, 35+2*(45-35)/3, 30+25+7+5, 45, 30+25+7, ctx1); // tie
 drawNoteHead(45, 30+25, ctx1); // A4   1-2-1/4
 drawNoteHead(55, 30+20, ctx1); // B4   1-2-2/4
@@ -29,7 +29,7 @@ drawLine(45+3, 30+25, 45+3, 30-2, ctx1);
 drawLine(55+3, 30+20, 55+3, 30-4, ctx1);
 drawLine(65+3, 30+15, 65+3, 30-6, ctx1);
 drawLine(75+3, 30+05, 75+3, 30-8, ctx1);
-crossBeams(45+3, 30-2, 75+3, 30-8, 2, 5, ctx1); // beat2
+crossBeams(45+3, 30-2, 75+3, 30-8, 1, 5, ctx1); // beat2
 drawEigthRest(85, 30+15, 2, ctx1);
 drawNoteHead(105, 30+05, ctx1);
 drawLine(105+3, 30+05, 105+3, 30-20, ctx1);
