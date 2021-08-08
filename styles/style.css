@@ -9,9 +9,14 @@
 div.container {
   width: 100%;
   background: lightgray;
-/*  display: grid;
+  display: grid;
   grid-template-columns: 7fr 4fr;
-  grid-gap: 5px 3px;*/
+  grid-gap: 5px 3px;
+
+
+
+
+
 	/* vertical lines, horizontal lines */
   /* 
  * a vertical line is a horizontal gap,
