@@ -66,7 +66,7 @@ function drawEigthRest(x, y, d, ctx) {
         }
     }
 }
-
+/*
  function drawFlags(x, y, q, xd, yd, ctx) {
      if (yd==="u" && xd==="l") {
          for (i=0, i<q; i++) {
@@ -89,7 +89,7 @@ function drawEigthRest(x, y, d, ctx) {
          }
      }
  }
-
+*/
 function drawTrebleClef(x, y, ctx){
     // drawReticle(x, y, ctx);
     ctx.fillStyle = '#000';
