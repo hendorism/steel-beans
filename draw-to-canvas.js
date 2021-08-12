@@ -42,8 +42,8 @@ drawLine(135+3, 30+05, 135+3, 30-20, ctx1);
 //drawFlags(135+3, 30-20, 2, "r", "u", ctx);
 
 drawEigthRest(145, 30+15, ctx1);
-drawEigthRest(155, 30+15, ctx1);
-drawEigthRest(165, 30+15, ctx1);
-drawEigthRest(175, 30+15, ctx1);
+drawEigthRest(155, 40+15, ctx1);
+drawEigthRest(165, 50+15, ctx1);
+drawEigthRest(175, 60+15, ctx1);
 
 
