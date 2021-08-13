@@ -50,7 +50,7 @@ function drawEigthRest(x, y, d, ctx) {
     let m = 1;
     let radians = (2/3)*Math.PI;
     ctx.fillStyle = "#000";
-    ctx.strokeStyle = '#000';
+    ctx.strokeStyle = "#000";
     for (i=0; i<d; i++) {
         ctx.beginPath();
         ctx.arc(x-xdiff*i, y-1+10*i, 2.5*m, Math.PI*0.5, Math.PI*-2.5, true);

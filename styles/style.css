@@ -35,6 +35,10 @@ div.band-calendar {
   grid-gap: 2px 3px;
 }
 
+div.band-calendar ul {
+  font-size: 0.7em;
+}
+
 div.set-list {
   width: 100%;
   background: #004567;
