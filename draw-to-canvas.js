@@ -41,10 +41,10 @@ drawNoteHead(135, 30+05, ctx1);
 drawLine(135+3, 30+05, 135+3, 30-20, ctx1);
 //drawFlags(135+3, 30-20, 2, "r", "u", ctx);
 
-drawEigthRest(145, 30+15, ctx1);
-drawEigthRest(155, 40+15, ctx1);
-drawEigthRest(165, 50+15, ctx1);
-drawEigthRest(175, 60+15, ctx1);
+drawEigthRest(145, 30+15, 1, ctx1);
+drawEigthRest(155, 40+15, 1, ctx1);
+drawEigthRest(165, 50+15, 2, ctx1);
+drawEigthRest(175, 60+15, 2, ctx1);
 
 drawLine(10, 10, 100, 100, ctx1);
 
@@ -55,7 +55,7 @@ drawLine(10, 10, 100, 100, ctx1);
 
 var canvas2 = document.getElementById("canvas2");
 var ctx2 = canvas2.getContext("2d");
-var canvas2_title = "test canvas";
+//var canvas2_title = "test canvas";
 //drawText(x, y, canvas1_title, black);
 ctx1.fillStyle = "#ffbbbb";
 ctx1.fillRect(0, 0, canvas2.width, canvas2.height);
