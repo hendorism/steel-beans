@@ -5,7 +5,7 @@
 
 var canvas1 = document.getElementById("canvas1");
 var ctx1 = canvas1.getContext("2d");
-var canvas1_title = "Similar Shirt riff";
+//var canvas1_title = "Similar Shirt riff";
 //drawText(x, y, canvas1_title, black);
 ctx1.fillStyle = "#FF0000";
 ctx1.fillRect(0, 0, canvas1.width, canvas1.height);
