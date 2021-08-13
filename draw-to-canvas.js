@@ -46,5 +46,5 @@ drawEigthRest(155, 40+15, ctx1);
 drawEigthRest(165, 50+15, ctx1);
 drawEigthRest(175, 60+15, ctx1);
 
-
+drawLine(10, 10, 100, 100, ctx1);
 
