@@ -48,3 +48,40 @@ drawEigthRest(175, 60+15, ctx1);
 
 drawLine(10, 10, 100, 100, ctx1);
 
+
+
+
+
+
+var canvas2 = document.getElementById("canvas2");
+var ctx2 = canvas2.getContext("2d");
+var canvas2_title = "test canvas";
+//drawText(x, y, canvas1_title, black);
+ctx1.fillStyle = "#ffbbbb";
+ctx1.fillRect(0, 0, canvas2.width, canvas2.height);
+for (e=0; e<3; e++) {
+    drawTrebleClef(10, 40+20+70*e, ctx2);
+    for (i=0; i<5; i++) {
+        drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx2);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
