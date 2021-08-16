@@ -31,15 +31,17 @@ drawLine(65+3, 30+15, 65+3, 30-6, ctx1);
 drawLine(75+3, 30+05, 75+3, 30-8, ctx1);
 crossBeams(45+3, 30-2, 75+3, 30-8, 1, 5, ctx1); // beat2
 
+drawLine(80, 30+00, 80, 30+40, ctx1); // m2
+
 drawEigthRest(85, 30+15, 1, ctx1);
 drawNoteHead(105, 30+05, ctx1);
 drawLine(105+3, 30+05, 105+3, 30-20, ctx1);
-//drawFlags(105+3, 30-20, 2, "r", "u", ctx);
+drawFlags(105+3, 30-20, 2, "r", "u", ctx);
 
 drawEigthRest(115, 30+15, 1, ctx1);
 drawNoteHead(135, 30+05, ctx1);
 drawLine(135+3, 30+05, 135+3, 30-20, ctx1);
-//drawFlags(135+3, 30-20, 2, "r", "u", ctx);
+drawFlags(135+3, 30-20, 2, "r", "u", ctx);
 
 
 drawNoteHead(145, 30+00, ctx1);
@@ -52,9 +54,8 @@ drawLine(165+3, 30+00, 165+3, 30-20, ctx1);
 drawLine(175+3, 30+05, 175+3, 30-20, ctx1);
 crossBeams(145+3, 30-20, 175+3, 30-20, 1, 5, ctx1);
 
-drawQuarterRest(185, 30+25, ctx1);
+drawQuarterRest(190, 30+25, ctx1);
 
-drawLine(10, 10, 100, 100, ctx1);
 
 
 
