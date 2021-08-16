@@ -1,3 +1,9 @@
+/*
+Methods in this file require you pass in a "ctx"
+This specifies which context you are drawing to
+(which canvas you are drawing to.)
+*/
+
 const lineWidth = 1;
 const thickLineWidth = 2.5;
 
@@ -88,22 +94,24 @@ function drawQuarterRest(x, y, ctx) {
 // y   position of flag bezier start
 // q   quantity of flags
 // xd  lateral direction of flag(s)
-// xy  vertical direction of flag(s)
+//     0 = l, 1 = r
+// xd  vertical direction of flag(s)
+//     0 = d, 1 = u
 // ctx declare which canvas context
 function drawFlags(x, y, q, xd, yd, ctx) {
-    if (yd==="u" && xd==="l") {
+    if        (yd===1 && xd===0) {
         for (i=0; i<q; i++) {
             drawBezier(x, y, x+2, y+3, x+4, y+5, x+2, y+6, ctx);
         }
-    } else if (yd==="u" && xd==="r") {
+    } else if (yd===1 && xd===1) {
         for (i=0; i<q; i++) {
             drawBezier(x, y, x-2, y+3, x-4, y+5, x-2, y+6, ctx);
         }
-    } else if (yd==="d" && xd==="l") {
+    } else if (yd===0 && xd===0) {
         for (i=0; i<q; i++) {
             drawBezier(x, y, x-2, y-3, x-4, y-5, x-2, y-6, ctx);
         }
-    } else if (yd==="d" && xd==="r") {
+    } else if (yd===0 && xd===1) {
         for (i=0; i<q; i++) {
             drawBezier(x, y, x+2, y-3, x+4, y-5, x+2, y-6, ctx);
         }
