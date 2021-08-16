@@ -2,15 +2,31 @@
 
 </style></head><body>
 <canvas id="canvas1" width="500px" height="250px" style="border:1px solid #c3c3c3;"></canvas>
+
 <p>When the user resizes the page,
 the canvas height and width properties
-will be changed, and the staff and notes on the page will redraw to fill canvas. The elements drawn on the canvas will not stretch on resize, they will be redrawn to fill page. So when you makee the page wider, notes and rests and measures will automatically be sorted onto the line above based on how much will fit.
-</p>
+will be changed, and the staff and notes on the
+page will redraw to fill canvas. The
+elements drawn on the canvas will not stretch on
+resize, they will be redrawn to fill page. So when
+you makee the page wider, notes and rests and
+measures will automatically be sorted onto the line
+above based on how much will fit.</p>
+
+<div id="div1"></div>
+
 <script src="music-symbols.js"></script>
 <script>
 
 var canvas1 = document.getElementById"canvas1";
 var ctx1 = canvas1.getContext("2d");
+const node = document.createTextNode(canvas1.height);
+const para = document.createElement("p");
+para.appendChild(node);
+const element = document.getElementById("div1");
+element.appendChild(para);
 
+canvas1_top-margin = 30;
+drawLine(10, 30, 10, 70);
 
 </script></body></html>
