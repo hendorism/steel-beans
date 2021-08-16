@@ -92,19 +92,19 @@ function drawQuarterRest(x, y, ctx) {
 // ctx declare which canvas context
 function drawFlags(x, y, q, xd, yd, ctx) {
     if (yd==="u" && xd==="l") {
-        for (i=0, i<q; i++) {
+        for (i=0; i<q; i++) {
             drawBezier(x, y, x+2, y+3, x+4, y+5, x+2, y+6, ctx);
         }
     } else if (yd==="u" && xd==="r") {
-        for (i=0, i<q; i++) {
+        for (i=0; i<q; i++) {
             drawBezier(x, y, x-2, y+3, x-4, y+5, x-2, y+6, ctx);
         }
     } else if (yd==="d" && xd==="l") {
-        for (i=0, i<q; i++) {
+        for (i=0; i<q; i++) {
             drawBezier(x, y, x-2, y-3, x-4, y-5, x-2, y-6, ctx);
         }
     } else if (yd==="d" && xd==="r") {
-        for (i=0, i<q; i++) {
+        for (i=0; i<q; i++) {
             drawBezier(x, y, x+2, y-3, x+4, y-5, x+2, y-6, ctx);
         }
     }
