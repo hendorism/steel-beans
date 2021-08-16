@@ -84,30 +84,32 @@ function drawQuarterRest(x, y, ctx) {
   ctx.stroke();
 }
 
-/*
- function drawFlags(x, y, q, xd, yd, ctx) {
-     if (yd==="u" && xd==="l") {
-         for (i=0, i<q; i++) {
-             drawBezier(x, y, x+2, y+3, x+4, y+5, x+2, y+6, ctx);
-         }
-     }
-     if (yd==="u" && xd==="r") {
-         for (i=0, i<q; i++) {
-             drawBezier(x, y, x-2, y+3, x-4, y+5, x-2, y+6, ctx);
-         }
-     }
-     if (yd==="d" && xd==="l") {
-         for (i=0, i<q; i++) {
-             drawBezier(x, y, x-2, y-3, x-4, y-5, x-2, y-6, ctx);
-         }
-     }
-     if (yd==="d" && xd==="r") {
-         for (i=0, i<q; i++) {
-             drawBezier(x, y, x+2, y-3, x+4, y-5, x+2, y-6, ctx);
-         }
-     }
- }
-*/
+// x   position of flag bezier start
+// y   position of flag bezier start
+// q   quantity of flags
+// xd  lateral direction of flag(s)
+// xy  vertical direction of flag(s)
+// ctx declare which canvas context
+function drawFlags(x, y, q, xd, yd, ctx) {
+    if (yd==="u" && xd==="l") {
+        for (i=0, i<q; i++) {
+            drawBezier(x, y, x+2, y+3, x+4, y+5, x+2, y+6, ctx);
+        }
+    } else if (yd==="u" && xd==="r") {
+        for (i=0, i<q; i++) {
+            drawBezier(x, y, x-2, y+3, x-4, y+5, x-2, y+6, ctx);
+        }
+    } else if (yd==="d" && xd==="l") {
+        for (i=0, i<q; i++) {
+            drawBezier(x, y, x-2, y-3, x-4, y-5, x-2, y-6, ctx);
+        }
+    } else if (yd==="d" && xd==="r") {
+        for (i=0, i<q; i++) {
+            drawBezier(x, y, x+2, y-3, x+4, y-5, x+2, y-6, ctx);
+        }
+    }
+}
+
 function drawTrebleClef(x, y, ctx){
     // drawReticle(x, y, ctx);
     ctx.fillStyle = '#000';
