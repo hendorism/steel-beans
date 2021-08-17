@@ -93,30 +93,40 @@ function drawQuarterRest(x, y, ctx) {
 // x   position of flag bezier start
 // y   position of flag bezier start
 // q   quantity of flags
-// xd  lateral direction of flag(s)
-//     0 = l, 1 = r
-// xd  vertical direction of flag(s)
-//     0 = d, 1 = u
+// sd  stem direction
 // ctx declare which canvas context
-function drawFlags(x, y, q, xd, yd, ctx) {
-    if        (yd===1 && xd===0) {
-        for (i=0; i<q; i++) {
-            drawBezier(x, y, x+2, y+3, x+4, y+5, x+2, y+6, ctx);
-        }
-    } else if (yd===1 && xd===1) {
-        for (i=0; i<q; i++) {
-            drawBezier(x, y, x-2, y+3, x-4, y+5, x-2, y+6, ctx);
-        }
-    } else if (yd===0 && xd===0) {
-        for (i=0; i<q; i++) {
-            drawBezier(x, y, x-2, y-3, x-4, y-5, x-2, y-6, ctx);
-        }
-    } else if (yd===0 && xd===1) {
-        for (i=0; i<q; i++) {
-            drawBezier(x, y, x+2, y-3, x+4, y-5, x+2, y-6, ctx);
-        }
+
+function drawFlags(x, y, q, sd, ctx) {
+  // shape the flags with fdx and fdy
+  let fdx = [0, 2, 4, 2]; // ("flag delta x")
+  let fdy = [0, 3, 5, 6]; // ("flag delta y")
+  if (sd === 1) { // (stem direction is up)
+    for (i=0; i<q; i++) {
+      drawBezier(x, y, x+fdx[1], y+fdy[1], x+fdx[2], y+fdy[2], x+fdx[3], y+fdy[3], ctx);
     }
+  } else if (sd === 0) { // (stem direction is down)
+    for (i=0; i<q; i++) {
+      drawBezier(x, y, x+fdx[1], y-fdy[1], x+fdx[2], y-fdy[2], x+fdx[3], y-fdy[3], ctx);
+    }
+  }
 }
+
+/*
+// drawFlags function using switch case...
+function drawFlags(x, y, q, xd, yd, ctx) {
+  let bezierPoints = [x, y, x+10, y+10, x+50, y-10, x-30, y+20];
+  switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+  }
+}
+*/
 
 function drawTrebleClef(x, y, ctx){
     // drawReticle(x, y, ctx);
