@@ -97,36 +97,21 @@ function drawQuarterRest(x, y, ctx) {
 // ctx declare which canvas context
 
 function drawFlags(x, y, q, sd, ctx) {
-  // shape the flags with fdx and fdy
-  let fdx = [0, 2, 4, 2]; // ("flag delta x")
-  let fdy = [0, 3, 5, 6]; // ("flag delta y")
-  if (sd === 1) { // (stem direction is up)
+  let dx = [0, 2, 4, 2]; // ("flag delta x")
+  let dy = [0, 3, 5, 6]; // ("flag delta y")
+  let g = 3.8; // (vertical gap between flags)
+  if (sd === 1) {
+    // (stem direction is up)
     for (i=0; i<q; i++) {
-      drawBezier(x, y, x+fdx[1], y+fdy[1], x+fdx[2], y+fdy[2], x+fdx[3], y+fdy[3], ctx);
+      drawBezier(x, y+i*g, x+dx[1], y+dy[1]+i*g, x+dx[2], y+dy[2]+i*g, x+dx[3], y+dy[3]+i*g, ctx);
     }
-  } else if (sd === 0) { // (stem direction is down)
+  } else if (sd === 0) {
+    // (stem direction is down)
     for (i=0; i<q; i++) {
-      drawBezier(x, y, x+fdx[1], y-fdy[1], x+fdx[2], y-fdy[2], x+fdx[3], y-fdy[3], ctx);
+      drawBezier(x, y-i*g, x+dx[1], y-dy[1]-i*g, x+dx[2], y-dy[2]-i*g, x+dx[3], y-dy[3]-i*g, ctx);
     }
   }
 }
-
-/*
-// drawFlags function using switch case...
-function drawFlags(x, y, q, xd, yd, ctx) {
-  let bezierPoints = [x, y, x+10, y+10, x+50, y-10, x-30, y+20];
-  switch(expression) {
-  case x:
-    // code block
-    break;
-  case y:
-    // code block
-    break;
-  default:
-    // code block
-  }
-}
-*/
 
 function drawTrebleClef(x, y, ctx){
     // drawReticle(x, y, ctx);
