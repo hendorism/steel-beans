@@ -97,8 +97,8 @@ function drawQuarterRest(x, y, ctx) {
 // ctx declare which canvas context
 
 function drawFlags(x, y, q, sd, ctx) {
-  let dx = [0, 2, 6, 2]; // ("flag delta x")
-  let dy = [0, 3, 5, 12]; // ("flag delta y")
+  let dx = [0, 4, 8, 2]; // ("flag delta x")
+  let dy = [0, 1, 5, 12]; // ("flag delta y")
   let g = 3.8; // (vertical gap between flags)
   if (sd === 1) {
     // (stem direction is up)
