@@ -336,25 +336,23 @@ drawNoteHead(205+06, 30-00, ctx1); // F5 #
 drawNoteHead(205+00, 30+05, ctx1); // E5
 drawNoteHead(205+00, 30+15, ctx1); // C5 #
 drawLine(205+3, 30+15, 205+03, 30-25, ctx1);
-//         //             //                //                //                //
-drawBezier(210, 30-10+00, 210+05, 30-10+07, 210+10, 30-10+07, 210+15, 30-10+00, ctx1);
-drawBezier(210, 30-00+00, 210+05, 30-00+07, 210+10, 30-00+07, 210+15, 30-00+00, ctx1);
-drawBezier(210, 30+05+00, 210+05, 30+05+07, 210+10, 30+05+07, 210+15, 30+05+00, ctx1);
-drawBezier(210, 30+15+00, 210+05, 30+15+07, 210+10, 30+15+07, 210+15, 30+15+00, ctx1);
+  //         //             //                //                //                //
+  drawBezier(210, 30-10+00, 210+05, 30-10+07, 210+10, 30-10+07, 210+15, 30-10+00, ctx1);
+  drawBezier(210, 30-00+00, 210+05, 30-00+07, 210+10, 30-00+07, 210+15, 30-00+00, ctx1);
+  drawBezier(210, 30+05+00, 210+05, 30+05+07, 210+10, 30+05+07, 210+15, 30+05+00, ctx1);
+  drawBezier(210, 30+15+00, 210+05, 30+15+07, 210+10, 30+15+07, 210+15, 30+15+00, ctx1);
 
 // 3
-function measureThreeBeatThree() {
+function measureThreeBeatThree(a) {
   let chordY = [30-10, 30+00, 30+05, 30+15];
   for (i=0; i<chordY.length; i++) {
-    let chordX = 230;
+    let chordX = 235+10*a;
     if (i === 1) {
       chordX += 6;
     }
     drawNoteHead(chordX, chordY[i], ctx1);
   }
 }
-
-measureThreeBeatThree();
 
 
 
