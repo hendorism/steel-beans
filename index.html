@@ -336,7 +336,29 @@ drawNoteHead(205+06, 30-00, ctx1); // F5 #
 drawNoteHead(205+00, 30+05, ctx1); // E5
 drawNoteHead(205+00, 30+15, ctx1); // C5 #
 drawLine(205+3, 30+15, 205+03, 30-25, ctx1);
+
   //         //             //                //                //                //
+
+// d for depth of slur curve
+function drawSlur(x1, y1, x2, y2, d, ctx) {
+  let width = x2-x1;
+  let a = x1;                //     x1
+  let b = y1;                    // y1
+  let c = x1+width/3;        //       x2
+  let d = y1+(y2-y1)/3;          //   y2
+  let e = x1+2*(width/3);    //         x3
+  let f = y1+(2*(y2-y1))/3;      //     y3
+  let g = x2;                //           x4
+  let h = y2;                    //       y4
+  drawBezier(a, b, c, d, e, f, g, h, ctx);
+}
+
+// w for width of tie
+function drawTie(x1, y1, w, d,tx) {
+  drawSlur();
+}
+
+// tie m3b2 to m3b3
   drawBezier(210, 30-10+00, 210+05, 30-10+07, 210+10, 30-10+07, 210+15, 30-10+00, ctx1);
   drawBezier(210, 30-00+00, 210+05, 30-00+07, 210+10, 30-00+07, 210+15, 30-00+00, ctx1);
   drawBezier(210, 30+05+00, 210+05, 30+05+07, 210+10, 30+05+07, 210+15, 30+05+00, ctx1);
@@ -345,12 +367,14 @@ drawLine(205+3, 30+15, 205+03, 30-25, ctx1);
 // 3
 function measureThreeBeatThree(a) {
   let chordY = [30-10, 30+00, 30+05, 30+15];
-  for (i=0; i<chordY.length; i++) {
-    let chordX = 235+10*a;
-    if (i === 1) {
-      chordX += 6;
+  for (ii=0; ii<2; ii++) {
+    for (i=0; i<chordY.length; i++) {
+      let chordX = 235+10*a+10*ii;
+      if (i === 1) {
+        chordX += 6;
+      }
+      drawNoteHead(chordX, chordY[i], ctx1);
     }
-    drawNoteHead(chordX, chordY[i], ctx1);
   }
 }
 
