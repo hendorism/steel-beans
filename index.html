@@ -317,6 +317,7 @@ drawFlags(     135+3-05, 30-20, 1, 1,             ctx1);
 // 3, 4
 drawNoteHead(145, 30+00, ctx1);
 drawNoteHead(155, 30-10, ctx1);
+drawLine(155-8, 30-10, 155+8, 30-10, ctx1);
 drawNoteHead(165, 30+00, ctx1);
 drawNoteHead(175, 30+05, ctx1);
 drawLine(145+3, 30+00, 145+3, 30-20, ctx1);
@@ -369,6 +370,21 @@ function drawTie(x1, y1, w, d,tx) {
   drawBezier(210, 30+15+00, 210+05, 30+15+07, 210+10, 30+15+07, 210+15, 30+15+00, ctx1);
 
 // 3
+
+function secondInversionSeventhChord(xx, yy) {
+  // yy = y value of tonic note head
+  // xx = x value of tonic note head minus 5
+  let pointVars = [ // locations of note heads relative to xx, yy
+    [0, -10], [5, 0], [0, 5], [0, 15]];
+  for (i=0; i<pointVars.length; i++) {
+    let x = pointVars[i][0]+xx;
+    let y = pointVars[i][1]+yy;
+    drawNoteHead(x, y, ctx1);
+  }
+}
+
+secondInversionSeventhChord(230, 30+00);
+
 /*
 function measureThreeBeatThree(a) {
   let chordY = [30-10, 30+00, 30+05, 30+15];
