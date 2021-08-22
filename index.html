@@ -383,10 +383,17 @@ function secondInversionSeventhChord(xx, yy) {
   }
 }
 
-secondInversionSeventhChord(230, 30+00);
-secondInversionSeventhChord(240, 30+00);
-secondInversionSeventhChord(250, 30+00);
-secondInversionSeventhChord(260, 30+00);
+	//230
+function strumAChord(x) {
+  for (i=0; i<4; i++) {
+    secondInversionSeventhChord(x+10*i, 30+y);
+    secondInversionSeventhChord(x+10*i, 30+y);
+    secondInversionSeventhChord(x+10*i, 30+y);
+    secondInversionSeventhChord(x+10*i, 30+y);
+  }
+}
+	
+strumAChord(230);
 
 /*
 function measureThreeBeatThree(a) {
