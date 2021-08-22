@@ -29,7 +29,7 @@ function drawReticle(x, y, ctx) {
     ctx.fill();
   }
   
-function drawLine(x1, y1, x2, y2, ctx){
+function drawLine(x1, y1, x2, y2, ctx)  {
     ctx.strokeStyle = "#000000";
     ctx.lineWidth = 1;
     ctx.beginPath();
@@ -45,7 +45,7 @@ function drawBezier(x1, y1, x2, y2, x3, y3, x4, y4, ctx) {
     ctx.stroke();
 }
 
-function drawNoteHead(x, y, ctx){
+function drawNoteHead(x, y, ctx) {
     ctx.beginPath();
     ctx.ellipse(x, y, 6/2, 8/2, Math.PI / 3, 0, 2 * Math.PI);
     ctx.fill();
@@ -113,7 +113,7 @@ function drawFlags(x, y, q, sd, ctx) {
   }
 }
 
-function drawTrebleClef(x, y, ctx){
+function drawTrebleClef(x, y, ctx) {
     // drawReticle(x, y, ctx);
     ctx.fillStyle = '#000';
     ctx.strokeStyle = '#000';
@@ -124,3 +124,56 @@ function drawTrebleClef(x, y, ctx){
     ctx.bezierCurveTo (x+16, y+35, x+10, y-45, x-4, y+5);
     ctx.stroke ();
 }
+
+function drawKeySignature(x, y, a, ctx) {
+  let orderOfFlats  = [  0, -15,   5, -10, 10,  -5, 15];
+  let orderOfSharps = [-20,  -5, -25, -10,  5, -15,  0];
+  //drawReticle(x,y);
+  if (a < 0) {
+    for(i=0; i>a; i-=1) {
+      drawFlat(x+5*-i, y+orderOfFlats[-i], ctx);
+    }
+  } else if (a > 0) {
+    for(i=0; i<a; i++){
+      drawSharp(x+5*i, y+orderOfSharps[i], ctx);
+    }
+  }
+}
+
+function drawFlat(x, y, ctx) {
+    //drawReticle (x,y);
+    ctx.beginPath();
+    ctx.moveTo(x-1, y-13);
+    ctx.lineTo(x-3, y+4);
+    ctx.bezierCurveTo(x+5, y+1, x+5, y-5, x-3, y-1);
+    ctx.bezierCurveTo(x+5, y-5, x+5, y+1, x-3, y+4);
+    ctx.stroke();
+}
+
+function drawDoubleFlat(x, y, ctx) {
+    //drawReticle(x,y);
+    drawFlat(x, y, ctx);
+    drawFlat(x-5, y, ctx);
+}
+
+function drawSharp(x, y, ctx) {
+    //drawReticle(x,y);
+    ctx.font = "18px arial"
+    ctx.fillText("#", x-4, y+7);
+}
+
+function drawDoubleSharp(x, y, ctx) {
+    //drawReticle(x,y);
+    ctx.font = "16px arial"
+    ctx.fillText("x", x-4, y+5);
+}
+
+function drawNatural(x,y){
+    //drawReticle(x,y);
+    drawLine(x-2,y-8,x-2,y+5);
+    drawLine(x-2,y+0,x+2,y-5);
+    drawLine(x-2,y+5,x+2,y-0);
+    drawLine(x+2,y-5,x+2,y+8);
+}
+
+
