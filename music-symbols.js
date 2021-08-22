@@ -168,12 +168,12 @@ function drawDoubleSharp(x, y, ctx) {
     ctx.fillText("x", x-4, y+5);
 }
 
-function drawNatural(x,y){
+function drawNatural(x,y, ctx){
     //drawReticle(x,y);
-    drawLine(x-2,y-8,x-2,y+5);
-    drawLine(x-2,y+0,x+2,y-5);
-    drawLine(x-2,y+5,x+2,y-0);
-    drawLine(x+2,y-5,x+2,y+8);
+    drawLine(x-2,y-8,x-2,y+5, ctx);
+    drawLine(x-2,y+0,x+2,y-5, ctx);
+    drawLine(x-2,y+5,x+2,y-0, ctx);
+    drawLine(x+2,y-5,x+2,y+8, ctx);
 }
 
 
