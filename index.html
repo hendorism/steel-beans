@@ -284,6 +284,8 @@ for (e=0; e<3; e++) {
         drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx1);
     }
 }
+	
+//drawKeySignature(10, 30, 3, ctx);
 drawNoteHead(25, 30+25, ctx1); // A4   1-1-1/2
 drawLine(25+3, 30+25, 25+3, 30-5, ctx1);
 drawNoteHead(35, 30+25, ctx1); // A4   1-1-2/2
@@ -371,7 +373,7 @@ function drawTie(x1, y1, w, d,tx) {
 
 // 3
 
-function secondInversionSeventhChord(xx, yy) {
+function secondInversionSeventhChord(xx, yy, ctx) {
   // yy = y value of tonic note head
   // xx = x value of tonic note head minus 5
   let pointVars = [ // locations of note heads relative to xx, yy
@@ -379,21 +381,21 @@ function secondInversionSeventhChord(xx, yy) {
   for (i=0; i<pointVars.length; i++) {
     let x = pointVars[i][0]+xx;
     let y = pointVars[i][1]+yy;
-    drawNoteHead(x, y, ctx1);
+    drawNoteHead(x, y, ctx);
   }
 }
 
 	//230
-function strumAChord(x) {
+function strumAChord(x, y, ctx) {
   for (i=0; i<4; i++) {
-    secondInversionSeventhChord(x+10*i, 30+y);
-    secondInversionSeventhChord(x+10*i, 30+y);
-    secondInversionSeventhChord(x+10*i, 30+y);
-    secondInversionSeventhChord(x+10*i, 30+y);
+    secondInversionSeventhChord(x+10*i, 30+y, ctx);
+    secondInversionSeventhChord(x+10*i, 30+y, ctx);
+    secondInversionSeventhChord(x+10*i, 30+y, ctx);
+    secondInversionSeventhChord(x+10*i, 30+y, ctx);
   }
 }
 	
-strumAChord(230);
+strumAChord(230, 30, ctx);
 
 /*
 function measureThreeBeatThree(a) {
