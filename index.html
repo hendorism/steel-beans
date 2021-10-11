@@ -15,24 +15,37 @@
 
 	<style>
 		div#div20211002 {
-		background-color:#ffeeff;
-		color:#004400;}
+      background-color:#ffffff;
+      color:#004400;
+      padding:6px;}
+    div#div20211002 a {
+      background-color:#002244;
+      color:#ff4400;
+      padding: 3px;
+    }
 	</style>
 	
 <div id="div20211002">
 
-<a href="https://drive.google.com/file/d/1yw7wsVo9xPzMcIoodj1FMFJXD9fJAAzm/view?usp=drivesdk">
-Forgot to send this, 
-<br>heres what I did that night Oct 2nd
+<br>10/9/2021
+  <br><canvas id="canvas20211009" width="500px" height="250px" style="border:1px solid #00445f;"></canvas>
+<!-- canvas -->
+
 <br>
+<h3>10/1/2021
+  <br>A message from our divine dictator:</h3>
+<br>Forgot to send this, 
+<br><a href="https://drive.google.com/file/d/1yw7wsVo9xPzMcIoodj1FMFJXD9fJAAzm/view?usp=drivesdk">
+Here's what I did that night Oct 2nd
 <br>Added this epic section to the end to redeem myself after such a snoozy song jk
 </a>
-
-	<br><a href="https://drive.google.com/file/d/1hULI4IzgB-QzvshqNrNMPcPEPgYYfdEu/view?usp=drivesdk
-">Aquatic Wasteland (working title)</a>
-	<br><a href="https://drive.google.com/file/d/1rdNE9nY7QFNdoMFYgPuTRskvBD5oSCBf/view?usp=drivesdk
-">Original demo</a>
-
+<br>
+<br><a href="https://drive.google.com/file/d/1hULI4IzgB-QzvshqNrNMPcPEPgYYfdEu/view?usp=drivesdk">
+      Aquatic Wasteland (working title)</a>
+<br>
+	<br><a href="https://drive.google.com/file/d/1rdNE9nY7QFNdoMFYgPuTRskvBD5oSCBf/view?usp=drivesdk">
+        Original demo</a>
+<br>
 <br>Verse
 <br>Fmaj7.   Em. Am.  Dm
 <br>
@@ -282,7 +295,7 @@ last sail                      A, F#m dorian<br>
 <div><!-- right column -->
 
 
-		<h3>band claendar</h3>
+		<h3>band calendar</h3>
 <div class="band-calendar">
 <div>Saturday October 30th</div>
 <div>ZOMBIE BALL, mirkwood, Arlington</div>
@@ -363,16 +376,35 @@ steyel baynes
 
 <script src="music-symbols.js"></script>
 
-<!--
-<script src="draw-to-canvas.js"></script>
--->
 
 <script>
 
 
+var canvas20211009 = document.getElementById("canvas20211009");
+var ctx20211009 = canvas20211009.getContext("2d");
+ctx20211009.fillStyle = "#eeeeff";
+ctx20211009.fillRect(0, 0, canvas20211009.width, canvas20211009.height);
+ctx20211009.fillText('New Aquatic Wasteland', 5, 5);
+for (e=0; e<3; e++) {
+    drawTrebleClef(10, 40+20+70*e, ctx20211009);
+    for (i=0; i<5; i++) {
+        drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx20211009);
+    }
+}
+let pitches20211009 = [-25, -15, -10, -15, -10, -5, 5, 5, 20, 10, 10, 5,
+-25, -15, -10, -15, -10, -5, 5];
+for (i=0; i<pitches20211009.length; i++) {
+  drawNoteHead(30+20*i, 50+pitches20211009[i], ctx20211009);
+}
+let chords20211009 = ['Fmaj7', 'Em', 'Am', 'Dm',
+'Fmaj7', 'Em', 'Am'];
+let chords20211009x = [25, 65, 145, 205,
+265, 305, 385];
+for (i=0; i<chords20211009.length; i++) {
+  ctx20211009.fillText(chords20211009[i], chords20211009x[i], 15);
+}
 
-
-
+//////////////////// OBIE BOBIE IS THE BEST DOG
 var canvas1 = document.getElementById("canvas1");
 var ctx1 = canvas1.getContext("2d");
 //var canvas1_title = "Similar Shirt riff";
