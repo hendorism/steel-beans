@@ -87,6 +87,10 @@ Here's what I did that night Oct 2nd
 <br>
 <br>Gm
 <br>
+<br><canvas id="canvas20211014" width="500px" height="250px" style="border:1px solid #00445f;"></canvas>
+<!-- canvas20211014 -->
+
+
 	</div><!-- /div#div20211002 -->
 	
 	
@@ -385,7 +389,21 @@ steyel baynes
 
 <script>
 
+////NOCTURNESTYLE
+var canvas20211014 = document.getElementById("canvas20211014");
+var ctx20211014 = canvas20211014.getContext("2d");
+ctx20211009.fillStyle = "#eeeeff";
+ctx20211009.fillRect(0, 0, canvas20211009.width, canvas20211009.height);
+ctx20211009.fillStyle = "#003399";
+ctx20211009.fillText('Nocturnestyle', 20, 7);
+for (e=0; e<3; e++) {
+    drawTrebleClef(10, 40+20+70*e, ctx20211009);
+    for (i=0; i<5; i++) {
+        drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx20211009);
+    }
+}
 
+////NEW AQUATIC WASTELAND
 var canvas20211009 = document.getElementById("canvas20211009");
 var ctx20211009 = canvas20211009.getContext("2d");
 ctx20211009.fillStyle = "#eeeeff";
