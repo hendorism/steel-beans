@@ -81,14 +81,16 @@ Here's what I did that night Oct 2nd
 <br>
 <br>(Not done writing this down yet)
 <br>
+<br><canvas id="canvas20211014" width="500px" height="250px" style="border:1px solid #00445f;"></canvas>
+<!-- canvas20211014 -->
+<br>
 <br>	
 <br><a href="https://drive.google.com/file/d/1Jq-gFfU1-6ZiMfoxOcVbY92ra-mW5irT/view?usp=sharing">The Bad Old Days</a>
 <br>C  D#    f#
 <br>
 <br>Gm
 <br>
-<br><canvas id="canvas20211014" width="500px" height="250px" style="border:1px solid #00445f;"></canvas>
-<!-- canvas20211014 -->
+
 
 
 	</div><!-- /div#div20211002 -->
@@ -390,6 +392,7 @@ steyel baynes
 <script>
 
 ////NOCTURNESTYLE
+////////////////////_____ Mellotron intro
 var canvas20211014 = document.getElementById("canvas20211014");
 var ctx20211014 = canvas20211014.getContext("2d");
 ctx20211009.fillStyle = "#eeeeff";
@@ -401,6 +404,34 @@ for (e=0; e<3; e++) {
     for (i=0; i<5; i++) {
         drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx20211009);
     }
+}
+let chords20211014 = [
+  ['D', 'F#(Cm6)', 'Bm',],
+  ['D', 'F#', 'Bm',],
+  ['Bm', 'Bm/A', 'E', 'G',],
+  ['Bb', 'A',],
+  ['G', 'Cm', 'Em',],
+  ['G', 'Cm', 'Em',],
+  ['D', 'D/C', 'D/B', 'D/Bb']
+];
+/*
+>   D.        F# (cm6 on keys)     bm
+<br>D.        F#                               bm
+<br>
+<br>Bm.     Bm/A.          E.             G
+<br>
+<br>Bb A.   
+<br> G.              Cm.              Em.               B7
+<br> G.              Cm.              Em.               B7.  Bb A
+<br>D        D/C.          D/B.        D/Bb
+<br>
+*/
+let chords20211014x = [
+  25, 65, 145, 205,
+  265, 305, 385
+];
+for (i=0; i<chords20211014.length; i++) {
+  ctx20211014.fillText(chords20211014[i], chords20211014x[i], 15);
 }
 
 ////NEW AQUATIC WASTELAND
