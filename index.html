@@ -26,7 +26,9 @@
 	</style>
 	
 <div id="div20211002">
-
+<h3>10/15/2021</h3>
+<br><canvas id="canvas20211015" width="500px" height="1000px" style="border:1px solid #00445f;"></canvas>
+<!-- canvas -->
 
 <h3>10/12/2021</h3>
 <a href="20211012.txt">new song: Espionage A Trois </a>
@@ -390,6 +392,32 @@ steyel baynes
 
 
 <script>
+
+////10/15/2021
+var canvas20211015 = document.getElementById("canvas20211015");
+var ctx20211015 = canvas20211015.getContext("2d");
+ctx20211015.fillStyle = "#eeeeff";
+ctx20211015.fillRect(0, 0, canvas20211015.width, canvas20211015.height);
+ctx20211015.fillStyle = "#003399";
+ctx20211015.fillText('10/15/2021', 20, 7);
+for (e=0; e<3; e++) {
+let systemClefs = ['treble', 'bass'];
+  for (ii=0; ii<2; ii++) {
+    for (i=0; i<5; i++) {
+      let topMargin = 30;
+      let x1 = 0;
+      let x2 = 400;
+      let y1 = topMargin+200*e+70*ii+10*i;
+      let y2 = y1;
+      drawLine(x1, y1, x2, y2, ctx20211015);
+    }
+    if (systemClefs[ii]=='treble') {
+      drawTrebleClef();
+    } else {
+      drawBassCleff();
+    }
+  }
+}
 
 ////NOCTURNESTYLE
 ////////////////////_____ Mellotron intro
