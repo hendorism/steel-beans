@@ -13,16 +13,16 @@
 			<div class="container">
 <div><!-- left column -->
 
-  
+
   <h3>10/12/2021</h3>
   <a href="20211012.txt">new song: Espionage A Trois </a>
   <br>
-  
+
   <br>10/9/2021
   <h3>New Aquatic Wasteland:</h3>
   <canvas id="canvas20211009" width="500px" height="250px" style="border:1px solid #00445f;"></canvas>
   <!-- canvas -->
-  
+
   <br>
   <br>
 
@@ -36,9 +36,9 @@
       padding: 3px;
     }
   </style>
-  
+
   <div id="div20211002">
-  
+
   <h3>10/1/2021
     <br>A message from our divine dictator:</h3>
 <br>Forgot to send this,
@@ -384,39 +384,13 @@ doesnt look hacky</div></div>
 ////             ///  ///       //  //      ///   ///   //           ///              ///
 ////           ///      ///   ///   //      //    ///   //           ///            ///
 ////       /////         //////     //       //  /////  //           ///       ///////
-////  
+////
 ////////////////////////////////////////////////////////////////////////////////
 </script>
 
 <script src="music-symbols.js"></script>
 <script>
 
-////  10/15/2021
-////  no title
-var canvas20211015 = document.getElementById("canvas20211015");
-var ctx20211015 = canvas20211015.getContext("2d");
-ctx20211015.fillStyle = "#eeeeff";
-ctx20211015.fillRect(0, 0, canvas20211015.width, canvas20211015.height);
-ctx20211015.fillStyle = "#003399";
-ctx20211015.fillText('10/15/2021', 20, 7);
-for (e=0; e<3; e++) {
-  let systemClefs = ['treble', 'bass'];
-  for (ii=0; ii<2; ii++) {
-    for (i=0; i<5; i++) {
-      let topMargin = 30;
-      let x1 = 0;
-      let x2 = canvas20211015.width;
-      let y1 = topMargin+200*e+70*ii+10*i;
-      let y2 = y1;
-      drawLine(x1, y1, x2, y2, ctx20211015);
-    }
-    if (systemClefs[ii] == 'treble') {
-      drawTrebleClef(10, 200*e+70*ii+60, ctx20211015);
-    } else {
-      drawBassClef(10, 200*e+70*ii+35, ctx20211015);
-    }
-  }
-}
 
 ////  NOCTURNESTYLE
 ////  Mellotron intro
@@ -454,17 +428,17 @@ for (e=0; e<3; e++) {
       drawKeySignature(30, 40+20+160*e+45*ii+25, -4, ctx20211014);
     }
   }
-  let noteHeads20211014 = [
-      [[30,20], [35,15], [40,20], [45,15], [50,20], [55,15]],
-      [[30,-15], [35,-25], [40,-10], [45,-15], [50,-15]
-  ];
-  for (i=0; i<noteHeads20211014.length; i++) {
-    for (ii=0; ii<noteHeads20211014[i].length; ii++) {
-      let x = noteHeads20211014[i][ii][0];
-      let y = noteHeads20211014[i][ii][1];
-      drawNoteHead(x, y, ctx20211014);
-    }
-  }
+  // let noteHeads20211014 = [
+  //     [[30,20], [35,15], [40,20], [45,15], [50,20], [55,15]],
+  //     [[30,-15], [35,-25], [40,-10], [45,-15], [50,-15]
+  // ];
+  // for (i=0; i<noteHeads20211014.length; i++) {
+  //   for (ii=0; ii<noteHeads20211014[i].length; ii++) {
+  //     let x = noteHeads20211014[i][ii][0];
+  //     let y = noteHeads20211014[i][ii][1];
+  //     drawNoteHead(x, y, ctx20211014);
+  //   }
+  // }
   /*
   let barlines20211014 = [
     [],
@@ -476,19 +450,19 @@ for (e=0; e<3; e++) {
   }
   */
 }
-let chords20211014 = [
-  ['D', 'F#(Cm6)', 'Bm'],
-  ['D', 'F#', 'Bm'],
-  ['Bm', 'Bm/A', 'E', 'G'],
-  ['Bb', 'A'],
-  ['G', 'Cm', 'Em'],
-  ['G', 'Cm', 'Em'],
-  ['D', 'D/C', 'D/B', 'D/Bb']
-];
-let chords20211014x = [
-  25, 65, 145, 205,
-  265, 305, 385
-];
+// let chords20211014 = [
+//   ['D', 'F#(Cm6)', 'Bm'],
+//   ['D', 'F#', 'Bm'],
+//   ['Bm', 'Bm/A', 'E', 'G'],
+//   ['Bb', 'A'],
+//   ['G', 'Cm', 'Em'],
+//   ['G', 'Cm', 'Em'],
+//   ['D', 'D/C', 'D/B', 'D/Bb']
+// 	];
+// let chords20211014x = [
+//   25, 65, 145, 205,
+//   265, 305, 385
+// ];
 // for (i=0; i<chords20211014.length; i++) {
 //   ctx20211014.fillText(chords20211014[i], chords20211014x[i], 15+160*i);
 // }
@@ -496,215 +470,215 @@ let chords20211014x = [
 ////  NEW AQUATIC WASTELAND
 ////  NEW AQUATIC WASTELAND
 ////  20211009
-var canvas20211009 = document.getElementById("canvas20211009");
-var ctx20211009 = canvas20211009.getContext("2d");
-ctx20211009.fillStyle = "#eeeeff";
-ctx20211009.fillRect(0, 0, canvas20211009.width, canvas20211009.height);
-ctx20211009.fillStyle = "#003399";
-ctx20211009.fillText('New Aquatic Wasteland', 20, 7);
-for (e=0; e<3; e++) {
-    drawTrebleClef(10, 40+20+70*e, ctx20211009);
-    for (i=0; i<5; i++) {
-        drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx20211009);
-    }
-}
-let pitches20211009 = [-25, -15, -10, -15, -10, -5, 5, 5, 20, 10, 10, 5,
-  -25, -15, -10, -15, -10, -5, 5];
-for (i=0; i<pitches20211009.length; i++) {
-  drawNoteHead(30+20*i, 50+pitches20211009[i], ctx20211009);
-}
-let stems20211009 = [20, 20, 20, 28, 27, 25, -20, -20, -30, -25, -25, -20,
-  20, 20, 25, 30, 25, 20, -20];
-for (i=0; i<stems20211009.length; i++) {
-  let x1 = 30+20*i-3.5;
-  let x2 = x1;
-  let y1 = 50+pitches20211009[i];
-  let y2 = y1+stems20211009[i];
-  drawLine(x1, y1, x2, y2, ctx20211009);
-}
-let beams20211009 = [0, 0, [60, 10], 0, 0, 0, 0, [20, 5], 0, [20, 0], 0, 0, 0, 0, [60, 0], 0, 0, 0, 0];
-for (i=0; i<beams20211009.length; i++) {
-  if (Array.isArray(beams20211009[i])) {
-    let x1 = 30+20*i-3.5;
-    let x2 = x1+beams20211009[i][0];
-    let y1 = 50+pitches20211009[i]+stems20211009[i];
-    let y2 = y1+beams20211009[i][1];
-    drawThickLine(x1, y1, x2, y2, ctx20211009);
-  }
-}
-let quarterRests20211009 = [420, 440, 460];
-for (i=0; i<quarterRests20211009.length; i++) {
-  let x = quarterRests20211009[i];
-  let y = 55;
-  drawQuarterRest(x, y, ctx20211009);
-}
-console.log(pitches20211009.length);
-console.log(stems20211009.length);
-console.log(beams20211009.length);
-let barlines20211009 = [140, 260, 380, 480];
-for (i=0; i<barlines20211009.length; i++) {
-  let x1 = barlines20211009[i];
-  let x2 = x1;
-  let y1 = 30;
-  let y2 = y1+40;
-  drawLine(x1, y1, x2, y2, ctx20211009);
-  if (i == barlines20211009.length-1) {
-    x1 += 5;
-    x2 = x1;
-    drawThickLine(x1, y1, x2, y2, ctx20211009);
-  }
-}
-let chords20211009 = ['Fmaj7', 'Em', 'Am', 'Dm',
-'Fmaj7', 'Em', 'Am'];
-let chords20211009x = [25, 65, 145, 205,
-265, 305, 385];
-for (i=0; i<chords20211009.length; i++) {
-  ctx20211009.fillText(chords20211009[i], chords20211009x[i], 15);
-}
+// var canvas20211009 = document.getElementById("canvas20211009");
+// var ctx20211009 = canvas20211009.getContext("2d");
+// ctx20211009.fillStyle = "#eeeeff";
+// ctx20211009.fillRect(0, 0, canvas20211009.width, canvas20211009.height);
+// ctx20211009.fillStyle = "#003399";
+// ctx20211009.fillText('New Aquatic Wasteland', 20, 7);
+// for (e=0; e<3; e++) {
+//     drawTrebleClef(10, 40+20+70*e, ctx20211009);
+//     for (i=0; i<5; i++) {
+//         drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx20211009);
+//     }
+// }
+// let pitches20211009 = [-25, -15, -10, -15, -10, -5, 5, 5, 20, 10, 10, 5,
+//   -25, -15, -10, -15, -10, -5, 5];
+// for (i=0; i<pitches20211009.length; i++) {
+//   drawNoteHead(30+20*i, 50+pitches20211009[i], ctx20211009);
+// }
+// let stems20211009 = [20, 20, 20, 28, 27, 25, -20, -20, -30, -25, -25, -20,
+//   20, 20, 25, 30, 25, 20, -20];
+// for (i=0; i<stems20211009.length; i++) {
+//   let x1 = 30+20*i-3.5;
+//   let x2 = x1;
+//   let y1 = 50+pitches20211009[i];
+//   let y2 = y1+stems20211009[i];
+//   drawLine(x1, y1, x2, y2, ctx20211009);
+// }
+// let beams20211009 = [0, 0, [60, 10], 0, 0, 0, 0, [20, 5], 0, [20, 0], 0, 0, 0, 0, [60, 0], 0, 0, 0, 0];
+// for (i=0; i<beams20211009.length; i++) {
+//   if (Array.isArray(beams20211009[i])) {
+//     let x1 = 30+20*i-3.5;
+//     let x2 = x1+beams20211009[i][0];
+//     let y1 = 50+pitches20211009[i]+stems20211009[i];
+//     let y2 = y1+beams20211009[i][1];
+//     drawThickLine(x1, y1, x2, y2, ctx20211009);
+//   }
+// }
+// let quarterRests20211009 = [420, 440, 460];
+// for (i=0; i<quarterRests20211009.length; i++) {
+//   let x = quarterRests20211009[i];
+//   let y = 55;
+//   drawQuarterRest(x, y, ctx20211009);
+// }
+// console.log(pitches20211009.length);
+// console.log(stems20211009.length);
+// console.log(beams20211009.length);
+// let barlines20211009 = [140, 260, 380, 480];
+// for (i=0; i<barlines20211009.length; i++) {
+//   let x1 = barlines20211009[i];
+//   let x2 = x1;
+//   let y1 = 30;
+//   let y2 = y1+40;
+//   drawLine(x1, y1, x2, y2, ctx20211009);
+//   if (i == barlines20211009.length-1) {
+//     x1 += 5;
+//     x2 = x1;
+//     drawThickLine(x1, y1, x2, y2, ctx20211009);
+//   }
+// }
+// let chords20211009 = ['Fmaj7', 'Em', 'Am', 'Dm',
+// 'Fmaj7', 'Em', 'Am'];
+// let chords20211009x = [25, 65, 145, 205,
+// 265, 305, 385];
+// for (i=0; i<chords20211009.length; i++) {
+//   ctx20211009.fillText(chords20211009[i], chords20211009x[i], 15);
+// }
 
 //////////////////// OBIE BOBIE IS THE BEST DOG
 ////  SIMILAR SHIRT RIFF
-var canvas1 = document.getElementById("canvas1");
-var ctx1 = canvas1.getContext("2d");
-//var canvas1_title = "Similar Shirt riff";
-//drawText(x, y, canvas1_title, black);
-ctx1.fillStyle = "#FF0000";
-ctx1.fillRect(0, 0, canvas1.width, canvas1.height);
-for (e=0; e<3; e++) {
-    drawTrebleClef(10, 40+20+70*e, ctx1);
-    for (i=0; i<5; i++) {
-        drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx1);
-    }
-}
-
-drawKeySignature(10, 30, 3, ctx1);
-drawNoteHead(25, 30+25, ctx1); // A4   1-1-1/2
-drawLine(25+3, 30+25, 25+3, 30-5, ctx1);
-drawNoteHead(35, 30+25, ctx1); // A4   1-1-2/2
-drawLine(35+3, 30+25, 35+3, 30-7, ctx1);
-//crossBeams(25+3, 30-5, 35+3, 30-7, 1, 6, ctx1);
-drawBezier(35, 30+25+7, 35+(45-35)/3, 30+25+7+5, 35+2*(45-35)/3, 30+25+7+5, 45, 30+25+7, ctx1); // tie
-drawNoteHead(45, 30+25, ctx1); // A4   1-2-1/4
-drawNoteHead(55, 30+20, ctx1); // B4   1-2-2/4
-drawNoteHead(65, 30+15, ctx1); // C#5  1-2-3/4
-drawNoteHead(75, 30+05, ctx1); // E5   1-2-4/4
-drawLine(45+3, 30+25, 45+3, 30-2, ctx1);
-drawLine(55+3, 30+20, 55+3, 30-4, ctx1);
-drawLine(65+3, 30+15, 65+3, 30-6, ctx1);
-drawLine(75+3, 30+05, 75+3, 30-8, ctx1);
-crossBeams(45+3, 30-2, 75+3, 30-8, 1, 5, ctx1); // beat2
-
-drawLine(85, 30+00, 85, 30+40, ctx1); // m2
-
-// 1
-drawEigthRest( 090+0-00, 30+15, 1,                ctx1);
-drawNoteHead(  105+0-00, 30+05,                   ctx1);
-drawLine(      105+3-00, 30+05, 105+3-00, 30-20,  ctx1);
-drawFlags(     105+3-00, 30-20, 1, 1,             ctx1);
-
-// 2
-drawEigthRest( 115+0-00, 30+15, 1,                ctx1);
-drawNoteHead(  135+0-05, 30+05,                   ctx1);
-drawLine(      135+3-05, 30+05, 135+3-05, 30-20,  ctx1);
-drawFlags(     135+3-05, 30-20, 1, 1,             ctx1);
-
-// 3, 4
-drawNoteHead(145, 30+00, ctx1);
-drawNoteHead(155, 30-10, ctx1);
-drawLine(155-8, 30-10, 155+8, 30-10, ctx1);
-drawNoteHead(165, 30+00, ctx1);
-drawNoteHead(175, 30+05, ctx1);
-drawLine(145+0, 30+00, 145+0, 30-20, ctx1);
-drawLine(155+3, 30-10, 155+3, 30-20, ctx1);
-drawLine(165+3, 30+00, 165+3, 30-20, ctx1);
-drawLine(175+3, 30+05, 175+3, 30-20, ctx1);
-crossBeams(145+0, 30-20, 175+3, 30-20, 1, 5, ctx1);
-
-drawLine(182, 30+00, 182, 30+40, ctx1); // m3
-
-// 1
-drawQuarterRest(195, 30+25, ctx1);
-
-// 2
-drawNoteHead(205+00, 30-10, ctx1); // A5
-drawNoteHead(205+06, 30-00, ctx1); // F5 #
-drawNoteHead(205+00, 30+05, ctx1); // E5
-drawNoteHead(205+00, 30+15, ctx1); // C5 #
-drawLine(205+3, 30+15, 205+03, 30-25, ctx1);
-
-  //         //             //                //                //                //
-
-/*
-// d for depth of slur curve
-function drawSlur(x1, y1, x2, y2, d, ctx) {
-  let width = x2-x1;
-  let a = x1;                //     x1
-  let b = y1;                    // y1
-  let c = x1+width/3;        //       x2
-  let d = y1+(y2-y1)/3;          //   y2
-  let e = x1+2*(width/3);    //         x3
-  let f = y1+(2*(y2-y1))/3;      //     y3
-  let g = x2;                //           x4
-  let h = y2;                    //       y4
-  drawBezier(a, b, c, d, e, f, g, h, ctx);
-}
-*/
-
-/*
-// w for width of tie
-function drawTie(x1, y1, w, d,tx) {
-  drawSlur();
-}
-*/
-
-// tie m3b2 to m3b3
-  drawBezier(210, 30-10+00, 210+05, 30-10+07, 210+10, 30-10+07, 210+15, 30-10+00, ctx1);
-  drawBezier(210, 30-00+00, 210+05, 30-00+07, 210+10, 30-00+07, 210+15, 30-00+00, ctx1);
-  drawBezier(210, 30+05+00, 210+05, 30+05+07, 210+10, 30+05+07, 210+15, 30+05+00, ctx1);
-  drawBezier(210, 30+15+00, 210+05, 30+15+07, 210+10, 30+15+07, 210+15, 30+15+00, ctx1);
-
-// 3
-
-function secondInversionSeventhChord(xx, yy, ctx) {
-  // yy = y value of tonic note head
-  // xx = x value of tonic note head minus 5
-  let pointVars = [ // locations of note heads relative to xx, yy
-    [0, -10], [5, 0], [0, 5], [0, 15]];
-  for (i=0; i<pointVars.length; i++) {
-    let x = pointVars[i][0]+xx;
-    let y = pointVars[i][1]+yy;
-    drawNoteHead(x, y, ctx);
-  }
-}
-
-function strumAChord(x, y, ctx) {
-  for (i=0; i<4; i++) {
-    secondInversionSeventhChord(x+10*i, 30+y, ctx);
-    secondInversionSeventhChord(x+10*i, 30+y, ctx);
-    secondInversionSeventhChord(x+10*i, 30+y, ctx);
-    secondInversionSeventhChord(x+10*i, 30+y, ctx);
-  }
-}
-
-//strumAChord(230, 00, ctx1);
-
-/*
-function measureThreeBeatThree(a) {
-  let chordY = [30-10, 30+00, 30+05, 30+15];
-  for (ii=0; ii<2; ii++) {
-    for (i=0; i<chordY.length; i++) {
-      let chordX = 235+10*a+10*ii;
-      if (i === 1) {
-        chordX += 6;
-      }
-      drawNoteHead(chordX, chordY[i], ctx1);
-    }
-  }
-}
-
-
-measureThreeBeatThree(0);
-
+// var canvas1 = document.getElementById("canvas1");
+// var ctx1 = canvas1.getContext("2d");
+// //var canvas1_title = "Similar Shirt riff";
+// //drawText(x, y, canvas1_title, black);
+// ctx1.fillStyle = "#FF0000";
+// ctx1.fillRect(0, 0, canvas1.width, canvas1.height);
+// for (e=0; e<3; e++) {
+//     drawTrebleClef(10, 40+20+70*e, ctx1);
+//     for (i=0; i<5; i++) {
+//         drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx1);
+//     }
+// }
+//
+// drawKeySignature(10, 30, 3, ctx1);
+// drawNoteHead(25, 30+25, ctx1); // A4   1-1-1/2
+// drawLine(25+3, 30+25, 25+3, 30-5, ctx1);
+// drawNoteHead(35, 30+25, ctx1); // A4   1-1-2/2
+// drawLine(35+3, 30+25, 35+3, 30-7, ctx1);
+// //crossBeams(25+3, 30-5, 35+3, 30-7, 1, 6, ctx1);
+// drawBezier(35, 30+25+7, 35+(45-35)/3, 30+25+7+5, 35+2*(45-35)/3, 30+25+7+5, 45, 30+25+7, ctx1); // tie
+// drawNoteHead(45, 30+25, ctx1); // A4   1-2-1/4
+// drawNoteHead(55, 30+20, ctx1); // B4   1-2-2/4
+// drawNoteHead(65, 30+15, ctx1); // C#5  1-2-3/4
+// drawNoteHead(75, 30+05, ctx1); // E5   1-2-4/4
+// drawLine(45+3, 30+25, 45+3, 30-2, ctx1);
+// drawLine(55+3, 30+20, 55+3, 30-4, ctx1);
+// drawLine(65+3, 30+15, 65+3, 30-6, ctx1);
+// drawLine(75+3, 30+05, 75+3, 30-8, ctx1);
+// crossBeams(45+3, 30-2, 75+3, 30-8, 1, 5, ctx1); // beat2
+//
+// drawLine(85, 30+00, 85, 30+40, ctx1); // m2
+//
+// // 1
+// drawEigthRest( 090+0-00, 30+15, 1,                ctx1);
+// drawNoteHead(  105+0-00, 30+05,                   ctx1);
+// drawLine(      105+3-00, 30+05, 105+3-00, 30-20,  ctx1);
+// drawFlags(     105+3-00, 30-20, 1, 1,             ctx1);
+//
+// // 2
+// drawEigthRest( 115+0-00, 30+15, 1,                ctx1);
+// drawNoteHead(  135+0-05, 30+05,                   ctx1);
+// drawLine(      135+3-05, 30+05, 135+3-05, 30-20,  ctx1);
+// drawFlags(     135+3-05, 30-20, 1, 1,             ctx1);
+//
+// // 3, 4
+// drawNoteHead(145, 30+00, ctx1);
+// drawNoteHead(155, 30-10, ctx1);
+// drawLine(155-8, 30-10, 155+8, 30-10, ctx1);
+// drawNoteHead(165, 30+00, ctx1);
+// drawNoteHead(175, 30+05, ctx1);
+// drawLine(145+0, 30+00, 145+0, 30-20, ctx1);
+// drawLine(155+3, 30-10, 155+3, 30-20, ctx1);
+// drawLine(165+3, 30+00, 165+3, 30-20, ctx1);
+// drawLine(175+3, 30+05, 175+3, 30-20, ctx1);
+// crossBeams(145+0, 30-20, 175+3, 30-20, 1, 5, ctx1);
+//
+// drawLine(182, 30+00, 182, 30+40, ctx1); // m3
+//
+// // 1
+// drawQuarterRest(195, 30+25, ctx1);
+//
+// // 2
+// drawNoteHead(205+00, 30-10, ctx1); // A5
+// drawNoteHead(205+06, 30-00, ctx1); // F5 #
+// drawNoteHead(205+00, 30+05, ctx1); // E5
+// drawNoteHead(205+00, 30+15, ctx1); // C5 #
+// drawLine(205+3, 30+15, 205+03, 30-25, ctx1);
+//
+//   //         //             //                //                //                //
+//
+// /*
+// // d for depth of slur curve
+// function drawSlur(x1, y1, x2, y2, d, ctx) {
+//   let width = x2-x1;
+//   let a = x1;                //     x1
+//   let b = y1;                    // y1
+//   let c = x1+width/3;        //       x2
+//   let d = y1+(y2-y1)/3;          //   y2
+//   let e = x1+2*(width/3);    //         x3
+//   let f = y1+(2*(y2-y1))/3;      //     y3
+//   let g = x2;                //           x4
+//   let h = y2;                    //       y4
+//   drawBezier(a, b, c, d, e, f, g, h, ctx);
+// }
+// */
+//
+// /*
+// // w for width of tie
+// function drawTie(x1, y1, w, d,tx) {
+//   drawSlur();
+// }
+// */
+//
+// // tie m3b2 to m3b3
+//   drawBezier(210, 30-10+00, 210+05, 30-10+07, 210+10, 30-10+07, 210+15, 30-10+00, ctx1);
+//   drawBezier(210, 30-00+00, 210+05, 30-00+07, 210+10, 30-00+07, 210+15, 30-00+00, ctx1);
+//   drawBezier(210, 30+05+00, 210+05, 30+05+07, 210+10, 30+05+07, 210+15, 30+05+00, ctx1);
+//   drawBezier(210, 30+15+00, 210+05, 30+15+07, 210+10, 30+15+07, 210+15, 30+15+00, ctx1);
+//
+// // 3
+//
+// function secondInversionSeventhChord(xx, yy, ctx) {
+//   // yy = y value of tonic note head
+//   // xx = x value of tonic note head minus 5
+//   let pointVars = [ // locations of note heads relative to xx, yy
+//     [0, -10], [5, 0], [0, 5], [0, 15]];
+//   for (i=0; i<pointVars.length; i++) {
+//     let x = pointVars[i][0]+xx;
+//     let y = pointVars[i][1]+yy;
+//     drawNoteHead(x, y, ctx);
+//   }
+// }
+//
+// function strumAChord(x, y, ctx) {
+//   for (i=0; i<4; i++) {
+//     secondInversionSeventhChord(x+10*i, 30+y, ctx);
+//     secondInversionSeventhChord(x+10*i, 30+y, ctx);
+//     secondInversionSeventhChord(x+10*i, 30+y, ctx);
+//     secondInversionSeventhChord(x+10*i, 30+y, ctx);
+//   }
+// }
+//
+// //strumAChord(230, 00, ctx1);
+//
+// /*
+// function measureThreeBeatThree(a) {
+//   let chordY = [30-10, 30+00, 30+05, 30+15];
+//   for (ii=0; ii<2; ii++) {
+//     for (i=0; i<chordY.length; i++) {
+//       let chordX = 235+10*a+10*ii;
+//       if (i === 1) {
+//         chordX += 6;
+//       }
+//       drawNoteHead(chordX, chordY[i], ctx1);
+//     }
+//   }
+// }
+// */
+//
+// // measureThreeBeatThree(0);
+//
 
 </script>
 
