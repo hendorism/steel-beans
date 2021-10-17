@@ -125,6 +125,36 @@ function drawTrebleClef(x, y, ctx) {
     ctx.stroke ();
 }
 
+function drawBassClef(x, y, ctx) {
+  ctx.strokeStyle = "#000000";
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.arc(x, y, 4, 0, Math.PI*2, true);
+  ctx.closePath();
+  ctx.fill();
+  //reticle done
+  //begin main swoop
+  let x1 = x-2;
+  let x2 = x-2;
+  let x3 = x+10;
+  let x4 = x+5
+  let y1 = y;
+  let y2 = y-10;
+  let y3 = y-10;
+  let y4 = y+40;
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.bezierCurveTo(x2, y2, x3, y3, x4, y4);
+  ctx.bezierCurveTo(x3+4, y3, x2+4, y2-4, x1-4, y1-8);
+  ctx.fill();
+  for (i=0; i<2; i++) {
+    ctx.beginPath();
+    ctx.arc(x+15, y+10*i, 2, 0, Math.PI*2, true);
+    ctx.closePath();
+    ctx.fill();
+  }
+}
+
 function drawKeySignature(x, y, a, ctx) {
   let orderOfFlats  = [  0, -15,   5, -10, 10,  -5, 15];
   let orderOfSharps = [-20,  -5, -25, -10,  5, -15,  0];
