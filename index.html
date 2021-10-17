@@ -26,12 +26,10 @@
 	</style>
 
 <div id="div20211002">
-<h3>10/16/2021</h3>
-<br><canvas id="canvas20211015" width="500px" height="1000px" style="border:1px solid #00445f;"></canvas>
-<!-- canvas -->
+  <!-- ^^ Left column begins here. ^^ -->
 
 <h3>10/15/2021</h3>
-<br><canvas id="canvas20211015" width="500px" height="600px" style="border:1px solid #00445f;"></canvas>
+<canvas id="canvas20211015" width="500px" height="600px" style="border:1px solid #00445f;"></canvas>
 <!-- 10/15/2021 -->
 
 <h3>10/12/2021</h3>
@@ -88,7 +86,7 @@ Here's what I did that night Oct 2nd
 <br>
 <br>(Not done writing this down yet)
 <br>
-<br><canvas id="canvas20211014" width="500px" height="550px" style="border:1px solid #00445f;"></canvas>
+<canvas id="canvas20211014" width="500px" height="500px" style="border:1px solid #00445f;"></canvas>
 <!-- canvas20211014 -->
 <br>
 <br>
@@ -415,7 +413,7 @@ ctx20211015.fillRect(0, 0, canvas20211015.width, canvas20211015.height);
 ctx20211015.fillStyle = "#003399";
 ctx20211015.fillText('10/15/2021', 20, 7);
 for (e=0; e<3; e++) {
-let systemClefs = ['treble', 'bass'];
+  let systemClefs = ['treble', 'bass'];
   for (ii=0; ii<2; ii++) {
     for (i=0; i<5; i++) {
       let topMargin = 30;
@@ -440,15 +438,22 @@ var canvas20211014 = document.getElementById("canvas20211014");
 var ctx20211014 = canvas20211014.getContext("2d");
 ctx20211014.fillStyle = "#eeeeff";
 ctx20211014.fillRect(0, 0, canvas20211014.width, canvas20211014.height);
-ctx20211014.fillStyle = "#003399";
-ctx20211014.fillText('Nocturnestyle', 300, 7);
+ctx20211014.fillStyle = "#6699bb";
+ctx20211014.font = "30px Arial";
+ctx20211014.fillText('Nocturnestyle', 300, 26);
+ctx20211014.font = "13px Arial";
 let clefs20211014 = ['treble', 'bass'];
 for (e=0; e<3; e++) {
+  let x1 = 2;
+  let x2 = x1;
+  let y1 = 30+10*0+160*e;
+  let y2 = 30+10*11+160*e;
+  drawLine(x1, y1, x2, y2, ctx20211014);
   for (ii=0; ii<2; ii++) {
     //  draw staff
     for (i=0; i<5; i++) {
-      let x1 = 10;
-      let x2 = 490;
+      let x1 = 0;
+      let x2 = canvas20211014.width;
       let y1 = 30+10*i+160*e+70*ii;
       let y2 = y1;
       drawLine(x1, y1, x2, y2, ctx20211014);
@@ -456,11 +461,38 @@ for (e=0; e<3; e++) {
     //  draw clef & key
     if (clefs20211014[ii] == 'treble') {
       drawTrebleClef(10, 40+20+160*e+45*ii, ctx20211014);
-      drawKeySignature(35, 40+20+160*e+45*ii-10, -4, ctx20211014);
+      drawKeySignature(30, 40+20+160*e+45*ii-10, -4, ctx20211014);
     } else {
-      drawBassClef(10, 40+20+160*e+45*ii, ctx20211014);
-      drawKeySignature(35, 40+20+160*e+45*ii+25, -4, ctx20211014);
+      drawBassClef(5, 40+20+160*e+45*ii, ctx20211014);
+      drawKeySignature(30, 40+20+160*e+45*ii+25, -4, ctx20211014);
     }
+  }
+  let noteHeads20211014 = [
+    [
+      [[30,20], [35,15], [40,20], [45,15], [50,20], [55,15]],
+      [[30,-15], [35,-25], [40,-10], [45,-15], [50,-15]]
+    ],
+    [
+
+    ],
+    [
+
+    ]
+  ];
+  for (i=0; i<noteHeads20211014.length; i++) {
+    for (ii=0; ii<noteHeads20211014[i].length; ii++) {
+      let x = noteHeads20211014[i][ii][0];
+      let y = noteHeads20211014[i][ii][1];
+      drawNoteHead(x, y, ctx20211014);
+    }
+  }
+  let barlines20211014 = [
+    [],
+    [],
+    []
+  ]
+  for (i=0; i<barlines20211014.length; i++) {
+
   }
 }
 let chords20211014 = [
@@ -476,9 +508,9 @@ let chords20211014x = [
   25, 65, 145, 205,
   265, 305, 385
 ];
-for (i=0; i<chords20211014.length; i++) {
-  ctx20211014.fillText(chords20211014[i], chords20211014x[i], 15+160*i);
-}
+// for (i=0; i<chords20211014.length; i++) {
+//   ctx20211014.fillText(chords20211014[i], chords20211014x[i], 15+160*i);
+// }
 
 ////  NEW AQUATIC WASTELAND
 ////  NEW AQUATIC WASTELAND
