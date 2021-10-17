@@ -31,8 +31,7 @@
       background-color:#ffbbff;
       color:#004400;
       padding:6px;}
-    div#div20211002 a {
-      background-color:#002244;
+    div#div20211002 {
       color:#ff4400;
       padding: 3px;
     }
@@ -44,7 +43,7 @@
     <br>A message from our divine dictator:</h3>
 <br>Forgot to send this,
 <br><a href="https://drive.google.com/file/d/1yw7wsVo9xPzMcIoodj1FMFJXD9fJAAzm/view?usp=drivesdk">
-Here's what I did that night Oct 2nd
+<!-- a -->Here's what I did that night Oct 2nd
 <br>Added this epic section to the end to redeem myself after such a snoozy song jk
 </a>
 <br>
@@ -88,14 +87,13 @@ Here's what I did that night Oct 2nd
 <!-- NOCTURNESTYLE -->
 <br>
 <br>
-<br><a href="https://drive.google.com/file/d/1Jq-gFfU1-6ZiMfoxOcVbY92ra-mW5irT/view?usp=sharing">The Bad Old Days</a>
+<br><a href="https://drive.google.com/file/d/1Jq-gFfU1-6ZiMfoxOcVbY92ra-mW5irT/view?usp=sharing">
+The Bad Old Days</a>
 <br>C  D#    f#
 <br>
 <br>Gm
-<br>
-
-	</div><!-- /div#div20211002 -->
-
+</div>
+<!-- /div#div20211002 -->
 
 <div style="padding:3px;background-color:#bbffee;">
 *this song is called75cents in nickels///// <br><br>
@@ -120,17 +118,9 @@ long way down 5 <br><br>
 *//////=dialog
 </div>
 
-
-
-
-
-	<!--
-		canvas1 similar shirt -->
-
+<!-- canvas1 similar shirt -->
 <canvas id="canvas1" width="500px" height="250px" style="border:1px solid #c3c3c3;"></canvas>
 <!-- /canvas for similar shirt riff -->
-
-<canvas id="canvas2" width="500px" height="250px" style="border:1px solid #c3c3c3;"></canvas>
 
 <br><br>
 <a href="jeremy_msg_2021-08-13.txt">a message from
@@ -465,16 +455,8 @@ for (e=0; e<3; e++) {
     }
   }
   let noteHeads20211014 = [
-    [
       [[30,20], [35,15], [40,20], [45,15], [50,20], [55,15]],
-      [[30,-15], [35,-25], [40,-10], [45,-15], [50,-15]]
-    ],
-    [
-
-    ],
-    [
-
-    ]
+      [[30,-15], [35,-25], [40,-10], [45,-15], [50,-15]
   ];
   for (i=0; i<noteHeads20211014.length; i++) {
     for (ii=0; ii<noteHeads20211014[i].length; ii++) {
@@ -483,6 +465,7 @@ for (e=0; e<3; e++) {
       drawNoteHead(x, y, ctx20211014);
     }
   }
+  /*
   let barlines20211014 = [
     [],
     [],
@@ -491,6 +474,7 @@ for (e=0; e<3; e++) {
   for (i=0; i<barlines20211014.length; i++) {
 
   }
+  */
 }
 let chords20211014 = [
   ['D', 'F#(Cm6)', 'Bm'],
@@ -579,6 +563,7 @@ for (i=0; i<chords20211009.length; i++) {
 }
 
 //////////////////// OBIE BOBIE IS THE BEST DOG
+////  SIMILAR SHIRT RIFF
 var canvas1 = document.getElementById("canvas1");
 var ctx1 = canvas1.getContext("2d");
 //var canvas1_title = "Similar Shirt riff";
@@ -719,58 +704,6 @@ function measureThreeBeatThree(a) {
 
 
 measureThreeBeatThree(0);
-
-*/
-
-
-
-
-// this is my bookmark.
-// when I need to find where I was working last,
-// I will ctrl+F to find in page and search for
-// "this is my bookmark"
-
-
-
-
-
-
-
-
-
-
-
-var canvas2 = document.getElementById("canvas2");
-var ctx2 = canvas2.getContext("2d");
-//var canvas2_title = "test canvas";
-//drawText(x, y, canvas1_title, black);
-ctx2.fillStyle = "#ffbbbb";
-ctx2.fillRect(0, 0, canvas2.width, canvas2.height);
-for (e=0; e<3; e++) {
-    drawTrebleClef(10, 40+20+70*e, ctx2);
-    for (i=0; i<5; i++) {
-        drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx2);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  sdfvdfvdf
-
-
 
 
 </script>
