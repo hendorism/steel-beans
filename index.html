@@ -474,71 +474,71 @@ for (e=0; e<3; e++) {
 ////  NEW AQUATIC WASTELAND
 ////  NEW AQUATIC WASTELAND
 ////  20211009
-// var canvas20211009 = document.getElementById("canvas20211009");
-// var ctx20211009 = canvas20211009.getContext("2d");
-// ctx20211009.fillStyle = "#eeeeff";
-// ctx20211009.fillRect(0, 0, canvas20211009.width, canvas20211009.height);
-// ctx20211009.fillStyle = "#003399";
-// ctx20211009.fillText('New Aquatic Wasteland', 20, 7);
-// for (e=0; e<3; e++) {
-//     drawTrebleClef(10, 40+20+70*e, ctx20211009);
-//     for (i=0; i<5; i++) {
-//         drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx20211009);
-//     }
-// }
-// let pitches20211009 = [-25, -15, -10, -15, -10, -5, 5, 5, 20, 10, 10, 5,
-//   -25, -15, -10, -15, -10, -5, 5];
-// for (i=0; i<pitches20211009.length; i++) {
-//   drawNoteHead(30+20*i, 50+pitches20211009[i], ctx20211009);
-// }
-// let stems20211009 = [20, 20, 20, 28, 27, 25, -20, -20, -30, -25, -25, -20,
-//   20, 20, 25, 30, 25, 20, -20];
-// for (i=0; i<stems20211009.length; i++) {
-//   let x1 = 30+20*i-3.5;
-//   let x2 = x1;
-//   let y1 = 50+pitches20211009[i];
-//   let y2 = y1+stems20211009[i];
-//   drawLine(x1, y1, x2, y2, ctx20211009);
-// }
-// let beams20211009 = [0, 0, [60, 10], 0, 0, 0, 0, [20, 5], 0, [20, 0], 0, 0, 0, 0, [60, 0], 0, 0, 0, 0];
-// for (i=0; i<beams20211009.length; i++) {
-//   if (Array.isArray(beams20211009[i])) {
-//     let x1 = 30+20*i-3.5;
-//     let x2 = x1+beams20211009[i][0];
-//     let y1 = 50+pitches20211009[i]+stems20211009[i];
-//     let y2 = y1+beams20211009[i][1];
-//     drawThickLine(x1, y1, x2, y2, ctx20211009);
-//   }
-// }
-// let quarterRests20211009 = [420, 440, 460];
-// for (i=0; i<quarterRests20211009.length; i++) {
-//   let x = quarterRests20211009[i];
-//   let y = 55;
-//   drawQuarterRest(x, y, ctx20211009);
-// }
-// console.log(pitches20211009.length);
-// console.log(stems20211009.length);
-// console.log(beams20211009.length);
-// let barlines20211009 = [140, 260, 380, 480];
-// for (i=0; i<barlines20211009.length; i++) {
-//   let x1 = barlines20211009[i];
-//   let x2 = x1;
-//   let y1 = 30;
-//   let y2 = y1+40;
-//   drawLine(x1, y1, x2, y2, ctx20211009);
-//   if (i == barlines20211009.length-1) {
-//     x1 += 5;
-//     x2 = x1;
-//     drawThickLine(x1, y1, x2, y2, ctx20211009);
-//   }
-// }
-// let chords20211009 = ['Fmaj7', 'Em', 'Am', 'Dm',
-// 'Fmaj7', 'Em', 'Am'];
-// let chords20211009x = [25, 65, 145, 205,
-// 265, 305, 385];
-// for (i=0; i<chords20211009.length; i++) {
-//   ctx20211009.fillText(chords20211009[i], chords20211009x[i], 15);
-// }
+ var canvas20211009 = document.getElementById("canvas20211009");
+ var ctx20211009 = canvas20211009.getContext("2d");
+ ctx20211009.fillStyle = "#eeeeff";
+ ctx20211009.fillRect(0, 0, canvas20211009.width, canvas20211009.height);
+ ctx20211009.fillStyle = "#003399";
+ ctx20211009.fillText('New Aquatic Wasteland', 20, 7);
+ for (e=0; e<3; e++) {
+     drawTrebleClef(10, 40+20+70*e, ctx20211009);
+     for (i=0; i<5; i++) {
+         drawLine(10, 30+10*i+70*e, 490, 30+10*i+70*e, ctx20211009);
+     }
+ }
+ let pitches20211009 = [-25, -15, -10, -15, -10, -5, 5, 5, 20, 10, 10, 5,
+   -25, -15, -10, -15, -10, -5, 5];
+ for (i=0; i<pitches20211009.length; i++) {
+   drawNoteHead(30+20*i, 50+pitches20211009[i], ctx20211009);
+ }
+ let stems20211009 = [20, 20, 20, 28, 27, 25, -20, -20, -30, -25, -25, -20,
+   20, 20, 25, 30, 25, 20, -20];
+ for (i=0; i<stems20211009.length; i++) {
+   let x1 = 30+20*i-3.5;
+   let x2 = x1;
+   let y1 = 50+pitches20211009[i];
+   let y2 = y1+stems20211009[i];
+   drawLine(x1, y1, x2, y2, ctx20211009);
+ }
+ let beams20211009 = [0, 0, [60, 10], 0, 0, 0, 0, [20, 5], 0, [20, 0], 0, 0, 0, 0, [60, 0], 0, 0, 0, 0];
+ for (i=0; i<beams20211009.length; i++) {
+   if (Array.isArray(beams20211009[i])) {
+     let x1 = 30+20*i-3.5;
+     let x2 = x1+beams20211009[i][0];
+     let y1 = 50+pitches20211009[i]+stems20211009[i];
+     let y2 = y1+beams20211009[i][1];
+     drawThickLine(x1, y1, x2, y2, ctx20211009);
+   }
+ }
+ let quarterRests20211009 = [420, 440, 460];
+ for (i=0; i<quarterRests20211009.length; i++) {
+   let x = quarterRests20211009[i];
+   let y = 55;
+   drawQuarterRest(x, y, ctx20211009);
+ }
+ console.log(pitches20211009.length);
+ console.log(stems20211009.length);
+ console.log(beams20211009.length);
+ let barlines20211009 = [140, 260, 380, 480];
+ for (i=0; i<barlines20211009.length; i++) {
+   let x1 = barlines20211009[i];
+   let x2 = x1;
+   let y1 = 30;
+   let y2 = y1+40;
+   drawLine(x1, y1, x2, y2, ctx20211009);
+   if (i == barlines20211009.length-1) {
+     x1 += 5;
+     x2 = x1;
+     drawThickLine(x1, y1, x2, y2, ctx20211009);
+   }
+ }
+ let chords20211009 = ['Fmaj7', 'Em', 'Am', 'Dm',
+ 'Fmaj7', 'Em', 'Am'];
+ let chords20211009x = [25, 65, 145, 205,
+ 265, 305, 385];
+ for (i=0; i<chords20211009.length; i++) {
+   ctx20211009.fillText(chords20211009[i], chords20211009x[i], 15);
+ }
 
 //////////////////// OBIE BOBIE IS THE BEST DOG
 ////  SIMILAR SHIRT RIFF
