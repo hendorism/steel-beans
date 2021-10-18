@@ -426,23 +426,23 @@ for (e=0; e<3; e++) {
     //  draw clef & key
     if (clefs20211014[ii] == 'treble') {
       drawTrebleClef(10, 40+20+160*e+45*ii, ctx20211014);
-      drawKeySignature(30, 40+20+160*e+45*ii-10, -4, ctx20211014);
+      drawKeySignature(30, 40+20+160*e+45*ii-10, 2, ctx20211014);
     } else {
       drawBassClef(5, 40+20+160*e+45*ii, ctx20211014);
-      drawKeySignature(30, 40+20+160*e+45*ii+25, -4, ctx20211014);
+      drawKeySignature(30, 40+20+160*e+45*ii+25, 2, ctx20211014);
     }
   }
-  // let noteHeads20211014 = [
-  //     [[30,20], [35,15], [40,20], [45,15], [50,20], [55,15]],
-  //     [[30,-15], [35,-25], [40,-10], [45,-15], [50,-15]
-  // ];
-  // for (i=0; i<noteHeads20211014.length; i++) {
-  //   for (ii=0; ii<noteHeads20211014[i].length; ii++) {
-  //     let x = noteHeads20211014[i][ii][0];
-  //     let y = noteHeads20211014[i][ii][1];
-  //     drawNoteHead(x, y, ctx20211014);
-  //   }
-  // }
+   let noteHeads20211014 = [
+       [[30,20], [35,15], [40,20], [45,15], [50,20], [55,15]],
+       [[30,-15], [35,-25], [40,-10], [45,-15], [50,-15]]
+   ];
+   for (i=0; i<noteHeads20211014.length; i++) {
+     for (ii=0; ii<noteHeads20211014[i].length; ii++) {
+       let x = noteHeads20211014[i][ii][0];
+       let y = noteHeads20211014[i][ii][1];
+       drawNoteHead(x, y, ctx20211014);
+     }
+   }
   /*
   let barlines20211014 = [
     [],
